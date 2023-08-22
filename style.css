@@ -1,0 +1,133 @@
+body {
+  font-family: sans-serif;
+}
+.header {
+  margin-top: -20px;
+  font-family: 'Poppins', sans-serif;
+}
+#app {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.clock {
+  width: 250px;
+  height: 250px;
+  border: 2px solid black;
+  box-shadow: 0 0 5px black;
+  background-image: linear-gradient(#00b4db, #0083b0);
+  border-radius: 50%;
+  position: relative;
+}
+
+/*hours hand*/
+.clock:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 70px;
+  background-color: #ffefba;
+  animation: clock-move 43200s linear infinite;
+  transform-origin: top;
+}
+
+/*minutes hand*/
+.clock:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 90px;
+  background-color: #ffefba;
+  animation: clock-move 3600s linear infinite;
+  transform-origin: top;
+}
+
+.clock .seconds {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 100px;
+  background-color: #ffefba;
+  animation: clock-move 60s linear infinite;
+  transform-origin: top;
+}
+
+@keyframes clock-move {
+  from {
+    transform: translateX(-50%) rotateZ(180deg);
+  }
+  to {
+    transform: translateX(-50%) rotateZ(540deg);
+  }
+}
+
+.clock .number {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 120px;
+  font-weight: bold;
+  font-size: 28px;
+  transform-origin: bottom;
+  display: flex;
+  justify-content: center;
+  text-shadow: 0 0 1px black;
+}
+
+.number:nth-child(1) {
+  transform: translateX(-50%) rotateZ(30deg);
+}
+
+.number:nth-child(2) {
+  transform: translateX(-50%) rotateZ(60deg);
+}
+
+.number:nth-child(3) {
+  transform: translateX(-50%) rotateZ(90deg);
+}
+
+.number:nth-child(4) {
+  transform: translateX(-50%) rotateZ(120deg);
+}
+
+.number:nth-child(5) {
+  transform: translateX(-50%) rotateZ(150deg);
+}
+
+.number:nth-child(6) {
+  transform: translateX(-50%) rotateZ(178deg);
+}
+
+.number:nth-child(7) {
+  transform: translateX(-50%) rotateZ(210deg);
+}
+
+.number:nth-child(8) {
+  transform: translateX(-50%) rotateZ(240deg);
+}
+
+.number:nth-child(9) {
+  transform: translateX(-50%) rotateZ(270deg);
+}
+
+.number:nth-child(10) {
+  transform: translateX(-50%) rotateZ(300deg);
+}
+
+.number:nth-child(11) {
+  transform: translateX(-50%) rotateZ(330deg);
+}
+
+.number:nth-child(12) {
+  transform: translateX(-50%) rotateZ(358deg);
+}
